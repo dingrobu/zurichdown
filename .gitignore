@@ -2,5 +2,9 @@
 .Rhistory
 .RData
 .DS_Store
+
+# Ignore certain folders
 inst/rmarkdown/templates/thesis/skeleton/_book/*
 inst/rmarkdown/templates/thesis/skeleton/_bookdown_files/*
+
+inst/rmarkdown/templates/thesis/skeleton/01-chap1_cache/*
