@@ -13,7 +13,7 @@ template:
   params:
     bootswatch: cosmo
 authors:
-  Leon Reteig:
+  Dennis Grobe:
     href: https://dennisgrobe.github.io
 development:
   mode: auto
