@@ -1,6 +1,44 @@
-pandoc: 2.11.4
-pkgdown: 1.6.1.9000
-pkgdown_sha: e40993723ae67dbca8a13a13a8c9954c46b528f9
-articles: {}
-last_built: 2021-03-20T04:25Z
+destination: docs
+home:
+  title: zurichdown
+  description: An R Markdown thesis template customized for the University of Zurich
+template:
+  opengraph:
+    image:
+      src: man/figures/thesisdown_hex.png
+      alt: "zurichdowndown: An R Markdown thesis template customized for the University of Zurich"
+    twitter:
+      creator: "@dennisgrobe"
+      card: summary
+  params:
+    bootswatch: cosmo
+authors:
+  Leon Reteig:
+    href: https://dennisgrobe.github.io
+development:
+  mode: auto
+navbar:
+  structure:
+    left:  [home, intro, articles, output]
+    right: [github]
+  components:
+    reference: ~
+    output:
+      text: Sample output
+      menu:
+      - text: Website (html)
+        href: sample_output/index.html
+      - text: One-sided A4 (pdf)
+        href: sample_output/thesis_A4.pdf
+      - text: Book B5 (pdf)
+        href: sample_output/thesis_B5.pdf
+    articles:
+      text: Articles
+      menu:
+      - text: Tips & Tricks
+        href: articles/tips-tricks.html
+      - text: Further customization (PDF)
+        href: articles/customization.html
+      - text: Publishing your thesis online (HTML)
+        href: articles/publishing.html
 
