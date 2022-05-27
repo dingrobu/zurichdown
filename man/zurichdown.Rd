@@ -7,7 +7,7 @@
 \title{zurichdown: A package for creating undergraduate, Masters, and PhD theses
 using R Markdown}
 \description{
-Using the bookdown package and LaTeX and Word thesis templates from Reed College, this package aims to encourage reproducible research using simple Markdown syntax while embedding all of the R code to produce plots and analyses as well.
+Using the bookdown package and LaTeX and Word thesis templates from University of Zurich, this package aims to encourage reproducible research using simple Markdown syntax while embedding all of the R code to produce plots and analyses as well.
 }
 \section{thesis_gitbook}{
 

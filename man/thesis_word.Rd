@@ -11,7 +11,7 @@ thesis_word(...)
 }
 \value{
 A Word Document based on (hopefully soon, but not currently)
-the Reed Senior Thesis Word template
+the University of Zurich Thesis Word template
 }
 \description{
 This is a function called in output in the YAML of the driver Rmd file
