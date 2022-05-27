@@ -13,5 +13,8 @@ docs
 # ignore pictures
 
 *.png
+<<<<<<< HEAD
 *.jpeg
 *.jpg
+=======
+>>>>>>> ad042b2d5499e4f9fa7ca3e5baee7c9fe438cd24
