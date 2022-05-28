@@ -206,10 +206,10 @@
 \def\@approvedforthe{Faculty}
 \def\advisor#1{\gdef \@advisor{#1}}
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
-\def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
-\global\let\@altadvisor\@empty
-\newif\if@altadvisor
-\@altadvisorfalse
+\def\professor#1{\gdef \@professor{#1} \@professortrue}
+\global\let\@professor\@empty
+\newif\if@professor
+\@professorfalse
 
 % added by DG
 \def\email#1{\gdef \@email{#1}}
@@ -331,7 +331,7 @@
  Student Number:
  		\hspace{4.6mm} \@matriculationNO	\\
  Department:
- 		\hspace{13.2mm} Economics, \@altadvisor	\\
+ 		\hspace{13.2mm} \@department, \@professor	\\
  Submitted:
  		\hspace{15.6mm} \@date
 	\end{flushleft}
@@ -349,9 +349,9 @@
   \centerline{(\@faculty)} %major
   \vskip 1cm		%space to sign
   \centerline{\makebox[\wd0][c]{\hrulefill}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
+	\if@professor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
   \centerline{\makebox[\wd0][c]{\@advisor}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
+	\if@professor \makebox[.5in]{} \makebox[\wd0][c]{\@professor} \fi}
   \par\vfil\null}
   \cleardoublepage
   }

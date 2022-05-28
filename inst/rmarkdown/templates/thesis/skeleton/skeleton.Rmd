@@ -8,9 +8,9 @@ matriculationNO: '20-999-000'
 date: 'May 20xx'
 institution: 'University of Zurich'
 faculty: 'Business, Economics and Informatics'
-advisor: 'Advisor F. Name'
+advisor: 'Your Advisor'
 # If you have more two advisors, un-silence line 7
-altadvisor: 'Your Other Advisor'
+professor: 'Your Professor'
 department: 'Economics'
 degree: 'Bachelor'
 knit: bookdown::render_book
