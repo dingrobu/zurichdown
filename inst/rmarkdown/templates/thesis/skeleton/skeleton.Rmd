@@ -1,14 +1,18 @@
 ---
 title: 'My Thesis'
 author: 'Your R. Name'
+email: 'name@mail.com'
+street: 'Musterstrasse 10'
+ZIPlocation: 'CH-8006 Zurich'
+matriculationNO: '20-999-000'
 date: 'May 20xx'
 institution: 'University of Zurich'
-division: 'Mathematics and Natural Sciences'
+faculty: 'Business, Economics and Informatics'
 advisor: 'Advisor F. Name'
 # If you have more two advisors, un-silence line 7
-#altadvisor: 'Your Other Advisor'
-department: 'Mathematics'
-degree: 'Bachelor of Arts'
+altadvisor: 'Your Other Advisor'
+department: 'Economics'
+degree: 'Bachelor'
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 

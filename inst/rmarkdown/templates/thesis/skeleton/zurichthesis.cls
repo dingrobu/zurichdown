@@ -10,7 +10,6 @@
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
 % 2015 Chester Ismay (CII) modified to create R Markdown template
-% 2022 Dennis Grobe (DG) modified the template further
 %
 % Oddities:
 %
@@ -25,7 +24,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{zurichthesis}[2022/05/27 The Zurich Thesis Class]
+\ProvidesClass{reedthesis}[2004/01/27 The Reed College Thesis Class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass{book}
@@ -197,20 +196,30 @@
 \def\@degree{\@latex@warning@no@line{No \noexpand\degree given}}
 \def\institution#1{\gdef \@institution{#1}}
 \def\@institution{\@latex@warning@no@line{No \noexpand\institution given}}
-\def\division#1{\gdef \@division{#1}}
-\def\@division{\@latex@warning@no@line{No \noexpand\division given}}
+\def\faculty#1{\gdef \@faculty{#1}}
+\def\@faculty{\@latex@warning@no@line{No \noexpand\faculty given}}
 \def\department#1{\gdef \@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
-\def\thedivisionof#1{\gdef \@thedivisionof{#1}}
-\def\@thedivisionof{The Division of}
+\def\thefacultyof#1{\gdef \@thefacultyof{#1}}
+\def\@thefacultyof{The Faculty of}
 \def\approvedforthe#1{\gdef \@approvedforthe{#1}}
-\def\@approvedforthe{Division}
+\def\@approvedforthe{Faculty}
 \def\advisor#1{\gdef \@advisor{#1}}
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
 \def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
 \global\let\@altadvisor\@empty
 \newif\if@altadvisor
 \@altadvisorfalse
+
+% added by DG
+\def\email#1{\gdef \@email{#1}}
+\def\@email{\@latex@warning@no@line{No \noexpand\email given}}
+\def\street#1{\gdef \@street{#1}}
+\def\@street{\@latex@warning@no@line{No \noexpand\street given}}
+\def\ZIPlocation#1{\gdef \@ZIPlocation{#1}}
+\def\@ZIPlocation{\@latex@warning@no@line{No \noexpand\ZIPlocation given}}
+\def\matriculationNO#1{\gdef \@matriculationNO{#1}}
+\def\@matriculationNO{\@latex@warning@no@line{No \noexpand\matriculationNO given}}
 
 \renewcommand\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
@@ -275,10 +284,10 @@
 
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Zurich LaTeX Thesis Class 2022/05/27 SN}}
-  \AtBeginDvi{\special{rawpostscript \RTpercent Zurich LaTeX Thesis Class 2022/05/27 SN}}
+  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Zurich LaTeX Thesis Class 2022/05/27 SN)}}
+  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
 \fi
 
 % I hacked the title page to all be the same font size
@@ -299,35 +308,37 @@
   \begin{center}
     \setcounter{page}{1}
     \null\vfil
-    {\fontsize{12}{14}\selectfont \@title}
+    \includegraphics[width=0.7\textwidth]{figure/uzh_logo.png}
+    \vfil
+
+    {\fontsize{24}{14}\selectfont  		   \textbf{\@degree { }Thesis}}
+    \vfil\vfil
+    {\fontsize{24}{14}\selectfont  		   \@title}
+    \vfil\vfil
+    {\fontsize{18}{14}\selectfont  		   \textbf{Department of \@department}} \\
+    \vfil
+    {\fontsize{18}{14}\selectfont  		   \textbf{\@institution}}
+    \vfil
+    \vfil
+    {\fontsize{18}{14}\selectfont \@advisor}
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    A Thesis \\
-    Presented to \\
-    \@thedivisionof \ \@division \\
-    \@institution
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    \@degree
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \bigskip
-    \centerline{}
-    \bigskip
-    {\fontsize{12}{14}\selectfont \lineskip .75em
-    \begin{tabular}[t]{c}%
-      \@author
-    \end{tabular}\par}
-    \vskip 1.5em
-    {\fontsize{12}{14}\selectfont \@date \par}
+    \begin{flushleft}
+ Author:	\hspace{21.8mm} \@author \\
+    		\hspace{38mm}	\@email \\
+    		\hspace{38mm}	\@street \\		\hspace{38mm}	\@ZIPlocation	\\
+ Student Number:
+ 		\hspace{4.6mm} \@matriculationNO	\\
+ Department:
+ 		\hspace{13.2mm} Economics, \@altadvisor	\\
+ Submitted:
+ 		\hspace{15.6mm} \@date
+	\end{flushleft}
   \end{center}\par
   \end{titlepage}
 
-%% Approved for the division page
+%% Approved for the faculty page
   \cleardoublepage
   {\fontsize{12}{14}
   \setbox0=\hbox{Approved for the \@approvedforthe}
@@ -335,7 +346,7 @@
   \null\vfil		% just below center of page
   \par\vskip 6cm	% below center, not center
   \centerline{\copy0}	% approved
-  \centerline{(\@department)} %major
+  \centerline{(\@faculty)} %major
   \vskip 1cm		%space to sign
   \centerline{\makebox[\wd0][c]{\hrulefill}
 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
