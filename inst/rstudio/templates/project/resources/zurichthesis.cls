@@ -10,6 +10,7 @@
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
 % 2015 Chester Ismay (CII) modified to create R Markdown template
+% 2022 Dennis Grobe (DG) modified the template further
 %
 % Oddities:
 %
@@ -24,7 +25,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{reedthesis}[2004/01/27 The Reed College Thesis Class]
+\ProvidesClass{zurichthesis}[2022/05/27 The Zurich Thesis Class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass{book}
@@ -274,10 +275,10 @@
 
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
-  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{!\RTpercent Zurich LaTeX Thesis Class 2022/05/27 SN}}
+  \AtBeginDvi{\special{rawpostscript \RTpercent Zurich LaTeX Thesis Class 2022/05/27 SN}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
+  \AtEndDocument{\pdfinfo{/Creator	(Zurich LaTeX Thesis Class 2022/05/27 SN)}}
 \fi
 
 % I hacked the title page to all be the same font size
