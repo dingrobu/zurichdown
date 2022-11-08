@@ -148,7 +148,7 @@ To use {thesisdown} from
     if (!require("remotes")) 
       install.packages("remotes", repos = "https://cran.rstudio.org")
     remotes::install_github("rstudio/bookdown")
-    remotes::install_github("ismayc/thesisdown")
+    remotes::install_github("dennisgrobe/zurichdown")
     ```
 
           Note that you may need to restart RStudio at this point for
