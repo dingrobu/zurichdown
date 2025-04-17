@@ -212,6 +212,15 @@ $if(preface)$
   \end{preface}
 $endif$
 
+$if(abbreviations)$
+\chapter*{List of Abbreviations}
+\begin{longtable}{p{.20\textwidth} | p{.80\textwidth}}
+  $for(abbreviations/pairs)$
+    \textbf{$it.key$} & $it.value$ \\
+  $endfor$
+\end{longtable}
+$endif$
+
 $if(toc)$
   \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
   \setcounter{secnumdepth}{$toc-depth$}
