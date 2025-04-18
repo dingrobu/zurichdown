@@ -53,12 +53,12 @@ if (!require(bookdown)) {
 }
 if (!require(zurichdown)) {
   if (params$`Install needed packages for {zurichdown}`) {
-    remotes::install_github("dennisgrobe/zurichdown")
+    remotes::install_github("dingrobu/zurichdown")
   } else {
     stop(
       paste(
         "You need to run",
-        'remotes::install_github("dennisgrobe/zurichdown")',
+        'remotes::install_github("dingrobu/zurichdown")',
         "first in the Console."
       )
     )
