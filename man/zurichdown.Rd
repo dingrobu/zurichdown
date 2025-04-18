@@ -30,6 +30,6 @@ Creates an R Markdown thesis template as an ebook
 }
 
 \author{
-\strong{Maintainer}: dingrobu 
+\strong{Maintainer}: dingrobu \email{zurichdown.promoter754@passmail.net}
 
 }
