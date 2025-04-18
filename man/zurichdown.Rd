@@ -30,6 +30,6 @@ Creates an R Markdown thesis template as an ebook
 }
 
 \author{
-\strong{Maintainer}: Dennis Grobe \email{dennis.grobe@shinternet.ch}
+\strong{Maintainer}: dingrobu 
 
 }
