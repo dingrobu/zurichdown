@@ -8,13 +8,13 @@ template:
       src: man/figures/thesisdown_hex.png
       alt: "zurichdowndown: An R Markdown thesis template customized for the University of Zurich"
     twitter:
-      creator: "@dennisgrobe"
+      creator: "@dingrobu"
       card: summary
   params:
     bootswatch: cosmo
 authors:
-  Dennis Grobe:
-    href: https://dennisgrobe.github.io
+  Din Grobu :
+    href: https://dingrobu.github.io
 development:
   mode: auto
 navbar:
